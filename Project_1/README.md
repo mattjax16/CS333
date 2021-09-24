@@ -319,6 +319,10 @@
 ### GO (extension):
     
     Description/Overview:
+        
+        Go was first designed in 2007 at Google, by Robert Griesemer, Rob Pike, and Ken Thompson(https://golang.org/doc/faq) and was released to the public in 2009.  While often called GoLang since its domain name is golang.org, the language's proper name is Go (https://tip.golang.org/doc/faq#go_or_golang).  Go is a statically typed, compiled programing language (compiled to machine code) that has syntax with a similar style to C, but with memory safety, garbage collection, structural typing(https://golang.org/doc/faq#implements_interface).  Go is also stated to be open source (https://opensource.google/projects/go). Go has some oh the nice features of higher-level languages like python while at the same time having better run time and finner control like a lower-level language such as C. Go also excels at concurrency (running operations in parallel) which makes it great for backend web development and other tasks where lots of concurrent computing is necessary. 
+
+
 
 
 
@@ -328,4 +332,86 @@
 ### Extensions:
     
     C Extension 1:
+        
+    
+
+        File: /C/ext1.c
+
+        Compile: gcc -o ext1 ext1.c
+
+        Run: ./ext1
+
+        Output:
+            
+
+        Observations:
+
+
+
+    C Extension 2:
+        
+    
+
+        File: /C/ext2.c
+
+        Compile: gcc -o ext2 ext2.c
+
+        Run: ./ext2
+
+        Output:
+            
+
+        Observations:
+
+
+
+    C Extension 3:
+        
+    
+
+        File: /C/ext3.c
+
+        Compile: gcc -o ext3 ext3.c
+
+        Run: ./ext3
+
+        Output:
+            
+
+        Observations:
+    
+
+    C Extension 4:
+        
+    
+
+        File: /C/ext4.c
+
+        Compile: gcc -o ext4 ext4.c
+
+        Run: ./ext4
+
+        Output:
+            
+
+        Observations:
+
+    
+    C Extension 5:
+        
+    
+
+        File: /C/ext5.c
+
+        Compile: gcc -o ext5 ext5.c
+
+        Run: ./ext5
+
+        Output:
+            
+
+        Observations:
+
+
+
     

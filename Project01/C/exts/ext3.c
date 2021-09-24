@@ -17,9 +17,8 @@
 
 int main () {
     
-    
-    char *test = "testing";
-    test[0] = 'T'; // This will create the bus error
+    char *test = "Bus Error";
+    test[0] = 'b'; // This will create the bus error
     return 0;
 
 }

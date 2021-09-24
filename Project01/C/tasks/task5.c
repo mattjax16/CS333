@@ -85,7 +85,7 @@ int main (int arg, char *argv[]) {
     printf("This size of the Struct is %lu\n", sizeof(Q5Struct2));
 
     for(i=0;i<sizeof(Q5Struct2); i++){
-        printf("Q4Struct2, Byte %d: %02X\n", i, ptr[i]);
+        printf("Q5Struct2, Byte %d: %02X\n", i, ptr[i]);
         if(i == 24 && ptr[i] == 00){
             printf("\nSafe!!!\n");
         }

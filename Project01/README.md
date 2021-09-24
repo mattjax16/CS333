@@ -5,14 +5,22 @@
 ---
 
 ### Project Layout:
-    project_1/
-    |
-    |__/C/
-       |
-       |__/cstk.h
-       |__/cstk.c
-       |__/cstktest.c
-       |__/cstktest2.c
+
+     Project1
+            ├── C
+            │   ├── exts
+            │   │   ├── ext1.c
+            │   │   ├── ext2.c
+            │   │   ├── ext3.c
+            │   │   ├── ext4.c
+            │   │   └── ext5.c
+            │   └── tasks
+            │       ├── task1.c
+            │       ├── task2.c
+            │       ├── task3.c
+            │       ├── task4.c
+            │       └── task5.c
+            └── README.md
     
 ---
 <br>
@@ -28,11 +36,11 @@
         and different data types are stored in
         memory in C
         
-        File: /C/task1.c
+        File: C/tasks/task1.c
 
-        Compile: gcc -o task1 task1.c
+        Compile: gcc -o C/bin/task1 C/tasks/task1.c
 
-        Run: ./task1
+        Run: ./C/bin/task1
 
         Output:
             Char, Byte  0: 0F
@@ -134,11 +142,11 @@
         This task assign a pointer to itself and
         have it loop contiuosly through the computer's memory
         
-        File: /C/task2.c
+        File: C/tasks/task2.c
 
-        Compile: gcc -o task2 task2.c
+        Compile: gcc -o C/bin/task2 C/tasks/task2.c
 
-        Run: ./task2
+        Run: ./C/bin/task2
 
         Output: It runs through all the bits until it ends with this output at the 2014th byte (byte 2013)
 
@@ -170,11 +178,11 @@
         This task was to write a program that repeatedly allocates a small amount of memory in a loop that goes on for a long time using a single variable which is bad practice and observe
         what happens.
 
-        File: /C/task3.c
+        File: C/tasks/task3.c
 
-        Compile: gcc -o task3 task3.c
+        Compile: gcc -o C/bin/task3 C/tasks/task3.c
 
-        Run: ./task3
+        Run: ./C/bin/task3
 
         Output:  Again It runs through all the bits until the loop ends at how ever many bites i said
         which is 90000000
@@ -194,11 +202,11 @@
         This task was to write a program created a struct with 3-4 variables including a char and
         short type and make sure that the struct has an odd number of bits. I then used an usigned char to print out each bit of the struct and see how it is layed out in memory.
 
-        File: /C/task4.c
+        File: C/tasks/task4.c
 
-        Compile: gcc -o task4 task4.c
+        Compile: gcc -o C/bin/task4 C/tasks/task4.c
 
-        Run: ./task4
+        Run: ./C/bin/task4
 
         Output:
             This size of the Struct is 28
@@ -241,11 +249,11 @@
         This task was to write a program created a struct with 3-4 variables including a char and
         short type and make sure that the struct has an odd number of bits. The same as task 4 but this time I am also asked to add a string to the struct using strcpy that is to big for the char array in the struct and see what happens. This is described as "hacked" in the project IE meaning the null space in the string char array as well as possibly other data in the struct contained in memory after the char arry is overwritten if the string added to the struct is to large.
 
-        File: /C/task5.c
+        File: C/tasks/task5.c
 
-        Compile: gcc -o task5 task5.c
+        Compile: gcc -o C/bin/task5 C/tasks/task5.c
 
-        Run: ./task5
+        Run: ./C/bin/task5
 
         Output:
             This size of the Struct is 28
@@ -333,84 +341,127 @@
     
     C Extension 1:
         
-    
+        For this extension I made it so that I could pass a string (specificly the name) into the struct for task 5 which then says wether the program has been hacked or not (wether the string is to long and has overwritten data and/or the null space byte after the string).
+        
+        This was accomplished with this snippet of code:
 
-        File: /C/ext1.c
+        I will show 3 different runs of the program one with no string, one with a string of a size that makes it safe, and finlly a run with a string that is to long, making it hacked.
 
-        Compile: gcc -o ext1 ext1.c
+        File: C/exts/ext1.c
 
-        Run: ./ext1
+        Compile: gcc -o C/bin/ext1 C/exts/ext1.c
 
-        Output:
+        Run 1: .C/bin/ext1
+
+        Output 1:
             
+            Error there needs to be a string passed in the argument for the struct!
 
-        Observations:
+
+        Run 2: ./C/bin/ext1 JohnathanMore
+
+        Output 2:
+
+            This size of the Struct is 28
+            EXT1Struct, Byte 0: 4A
+            EXT1Struct, Byte 1: 6F
+            EXT1Struct, Byte 2: 68
+            EXT1Struct, Byte 3: 6E
+            EXT1Struct, Byte 4: 61
+            EXT1Struct, Byte 5: 74
+            EXT1Struct, Byte 6: 68
+            EXT1Struct, Byte 7: 61
+            EXT1Struct, Byte 8: 6E
+            EXT1Struct, Byte 9: 4D
+            EXT1Struct, Byte 10: 6F
+            EXT1Struct, Byte 11: 72
+            EXT1Struct, Byte 12: 65
+            EXT1Struct, Byte 13: 00
+            EXT1Struct, Byte 14: 00
+            EXT1Struct, Byte 15: 00
+            EXT1Struct, Byte 16: 00
+            EXT1Struct, Byte 17: 00
+            EXT1Struct, Byte 18: 13
+            EXT1Struct, Byte 19: 00
+
+            Safe!!!
+            EXT1Struct, Byte 20: B8
+            EXT1Struct, Byte 21: 1E
+            EXT1Struct, Byte 22: 65
+            EXT1Struct, Byte 23: 40
+            EXT1Struct, Byte 24: 00
+            EXT1Struct, Byte 25: 00
+            EXT1Struct, Byte 26: 00
+            EXT1Struct, Byte 27: 00
+
+
+        Run 3: .C/bin/ext1 JohnathanMoreAdam
+
+        Output 3:
+            zsh: trace trap  ./C/bin/ext1 JohnathanMoreAdam
+
 
 
 
     C Extension 2:
         
+        For this extension I wanted to find a float in c that I could add 1 to and get back the same number. To do this I wrote a for loop to keep incrementing a float until it addeed one to it and value stayed the same.
+        
+        This was accomplished with this snippet of code:
     
+        File: C/exts/ext2.c
 
-        File: /C/ext2.c
+        Compile: gcc -o C/bin/ext2 C/exts/ext2.c
 
-        Compile: gcc -o ext2 ext2.c
-
-        Run: ./ext2
+        Run: .C/bin/ext2
 
         Output:
-            
-
-        Observations:
+            The largest integer a float can hold is 16777216.0
+            16777216.0 + 1.0 = 16777216.0
 
 
 
     C Extension 3:
         
+        For this extension I wanted to find create a bus error in c. A bus error occurs when the program is trying to access memory that the CPU can not physically address (invalid memory address). Here in particular the bus error accors because my program is trying to modify a string literal.
     
 
-        File: /C/ext3.c
+        File: C/exts/ext3.c
 
-        Compile: gcc -o ext3 ext3.c
+        Compile: gcc -o C/bin/ext3 C/exts/ext3.c
 
-        Run: ./ext3
+        Run: .C/bin/ext3
 
         Output:
-            
-
-        Observations:
+            zsh: bus error  ./C/bin/ext3
     
 
     C Extension 4:
         
-    
+        For this extension I wanted to find create a segmentation fault in c. I created a segmentation fault in this program by trying to read a derefrenced null pointer. A segmentation fault are a result of memory protection, and are usually caused by errors mwith pointers inparticular, illegal memory addressing. They differ from bus errors which are caused mainly by "physical memory addressing, or due to misaligned memory access – these are memory references that the hardware cannot address, rather than references that a process is not allowed to address." (https://en.wikipedia.org/wiki/Segmentation_fault)
 
-        File: /C/ext4.c
+        File: C/exts/ext4.c
 
-        Compile: gcc -o ext4 ext4.c
+        Compile: gcc -o C/bin/ext4 C/exts/ext4.c
 
-        Run: ./ext4
+        Run: .C/bin/ext4
 
         Output:
-            
 
-        Observations:
-
+            zsh: segmentation fault  ./C/bin/ext4
     
     C Extension 5:
         
-    
+        For this extension I wanted to find demonstrate how one error that can be encounter in C is a type of integer overflow that results it wrong answers for operations because the data types can not hold the number big nough for the result. For this example I used short ints to preform 1000 squard however a short int can at max hold 16960
 
-        File: /C/ext5.c
+        File: C/exts/ext5.c
 
-        Compile: gcc -o ext5 ext5.c
+        Compile: gcc -o C/bin/ext5 C/exts/ext5.c
 
-        Run: ./ext5
+        Run: .C/bin/ext5
 
         Output:
-            
-
-        Observations:
+            1000 * 1000 = 16960
 
 
 

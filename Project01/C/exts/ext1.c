@@ -39,7 +39,7 @@ int main (int arg, char *argv[]) {
     
     //checking that an argument has been provided
     if(arg < 2){
-        printf("Error there needs to be a string passed in the argument for the struct!");
+        printf("Error there needs to be a string passed in the argument for the struct! \n");
         exit(1);
     };
 
@@ -64,7 +64,7 @@ int main (int arg, char *argv[]) {
     printf("This size of the Struct is %lu\n", sizeof(EXT1Struct1));
 
     for(i=0;i<sizeof(EXT1Struct1); i++){
-        printf("Q4Struct1, Byte %d: %02X\n", i, ptr[i]);
+        printf("EXT1Struct, Byte %d: %02X\n", i, ptr[i]);
         if(i == 19 && ptr[i] == 00){
             printf("\nSafe!!!\n");
         }

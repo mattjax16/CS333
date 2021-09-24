@@ -1,13 +1,11 @@
 
-#ignore from jetbrains ides and vs code
-*idea/
-*vscode/
-idea/
-vscode/
-#ignore mac storage files
-*.DS_Store
-.DS_Store
-# ignore all files with out extensions
-# *
-# !/**/
-# !*.*
+#Ignore for vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/

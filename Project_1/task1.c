@@ -1,5 +1,5 @@
 /**
-* q_1_p_1.c
+* task1.c
 *
 * This is a c program for project 1 meant to demonstrate memory allocation 
 *
@@ -26,14 +26,14 @@ int main (int arg, char *argv[]) {
     double f2;
     
     
-    //Now I am going to assigning the value of 16 to each data type
-    c1 = 16;
-    c2 = 32;
-    integer1 = 1;
-    integer2 = 23;
-    integer3 = 16;
-    f1 = 0.4;
-    f2 = 16;
+    //Now I am going to assigning values to each data type
+    c1 = 15;
+    c2 = 16;
+    integer1 = 256;
+    integer2 = 268435458;
+    integer3 = 4503599627370649;
+    f1 = 16;
+    f2 = -16;
     
     
     // Declaring the Pointer 
@@ -44,43 +44,43 @@ int main (int arg, char *argv[]) {
     //Going through c1
     ptr = (unsigned char *)&c1;//assigning the memory address of c1 to the pointer
     for(i=0;i<sizeof(char); i++){
-        printf("Char %d: %02X\n", i, ptr[i]);
+        printf("Char, Byte  %d: %02X\n", i, ptr[i]);
     }
 
     //Going through c2
     ptr = (unsigned char *)&c2;
     for(i=0;i<sizeof(unsigned char); i++){
-        printf("Unsigned Char %d: %02X\n", i, ptr[i]);
+        printf("Unsigned Char, Byte  %d: %02X\n", i, ptr[i]);
     }
 
     //Going through integer1
     ptr = (unsigned char *)&integer1;
-    for(i=0;i<sizeof(unsigned char); i++){
-        printf("Short Int %d: %02X\n", i, ptr[i]);
+    for(i=0;i<sizeof(short int); i++){
+        printf("Short Int, Byte  %d: %02X\n", i, ptr[i]);
     }
 
     //Going through integer2
     ptr = (unsigned char *)&integer2;
-    for(i=0;i<sizeof(unsigned char); i++){
-        printf("Int %d: %02X\n", i, ptr[i]);
+    for(i=0;i<sizeof(int); i++){
+        printf("Int, Byte  %d: %02X\n", i, ptr[i]);
     }
 
     //Going through integer3
     ptr = (unsigned char *)&integer3;
-    for(i=0;i<sizeof(unsigned char); i++){
-        printf("Long Int %d: %02X\n", i, ptr[i]);
+    for(i=0;i<sizeof(long int); i++){
+        printf("Long Int, Byte  %d: %02X\n", i, ptr[i]);
     }
 
     //Going through f1
     ptr = (unsigned char *)&f1;
-    for(i=0;i<sizeof(unsigned char); i++){
-        printf("Float %d: %02X\n", i, ptr[i]);
+    for(i=0;i<sizeof(float); i++){
+        printf("Float, Byte %d: %02X\n", i, ptr[i]);
     }
 
     //Going through f2
     ptr = (unsigned char *)&f2;
-    for(i=0;i<sizeof(unsigned char); i++){
-        printf("Double %d: %02X\n", i, ptr[i]);
+    for(i=0;i<sizeof(double); i++){
+        printf("Double, Byte  %d: %02X\n", i, ptr[i]);
     }
 					
     return 0;

@@ -1,0 +1,23 @@
+<!---
+-Javascript
+-project 6: Document import
+-by Matt Bass
+-Sept 2021
+-This is the html file to run JS on browser and to take input of files
+and read them as well as count their words-->
+
+<!DOCTYPE HTML>
+<html>
+    <title>Project 6 for JS </title>
+    <script type="text/javascript" src="proj6-funcs.js"></script>
+    <body>
+        <h1>Choose a web page to go to </h1>
+
+        <!--    The input of type file lets us chose files (multiple lets us chose multiple files)    -->
+        <input type="text" id="chosen_URL" />
+
+        <input type="button" value=" Go To Url" onclick="window.open(document.getElementById('chosen_URL').value)"/>
+        
+
+    </body>
+</html>

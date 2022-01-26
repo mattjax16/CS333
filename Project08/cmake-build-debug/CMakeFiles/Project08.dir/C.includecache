@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/matthewbass/Documents/School_Colby/Colby/CS333/Project08/C/tasks/src/threadSortEXPERIMENT.c
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+time.h
+-
+sys/times.h
+-
+pthread.h
+-
+

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/matthewbass/Documents/School_Colby/Colby/CS333/Project07/C/tasks/src/class_timing.h
+sys/time.h
+-
+time.h
+-
+
+/Users/matthewbass/Documents/School_Colby/Colby/CS333/Project07/C/tasks/src/memAllocA.c
+time.h
+-
+stdio.h
+-
+stdlib.h
+-
+class_timing.h
+/Users/matthewbass/Documents/School_Colby/Colby/CS333/Project07/C/tasks/src/class_timing.h
+

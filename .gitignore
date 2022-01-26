@@ -390,3 +390,6 @@ FodyWeavers.xsd
 
 #MAC storage
 **/.DS_Store
+
+#all csv files
+*.csv

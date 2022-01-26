@@ -1,0 +1,23 @@
+<!---
+-Javascript
+-project 6: Document import
+-by Matt Bass
+-Sept 2021
+-This is the html file to run JS on browser and to take input of files
+and read them as well as count their words-->
+
+<!DOCTYPE HTML>
+<html>
+    <title>Project 6 for JS </title>
+    <script type="text/javascript" src="wordCounter.js"></script>
+    <body>
+        <h1>Choose a file to be read </h1>
+
+        <!--    The input of type file lets us chose files (multiple lets us chose multiple files)    -->
+        <input type="file" id="files" multiple/>
+
+        <input type="button" value=" Submit For Word Count" onclick="count_files()"/>
+        
+
+    </body>
+</html>

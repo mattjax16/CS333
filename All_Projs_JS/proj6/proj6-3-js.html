@@ -1,0 +1,41 @@
+<!---
+-Javascript
+-project 6: Document import
+-by Matt Bass
+-Sept 2021
+-This is the html file to run JS on browser and to take input of files
+and read them as well as count their words-->
+
+<!DOCTYPE HTML>
+<html>
+    <title>Project 6 for JS </title>
+    <script type="text/javascript" src="proj6-funcs.js"></script>
+    <body>
+        <h1>Answer the question </h1>
+
+        <!--    The input of type file lets us chose files (multiple lets us chose multiple files)    -->
+        28 /7  = <input type="text" id="answer" />
+
+        <input type="button" value=" Submit answer" onclick="
+        function checkAnswer(){
+            let answer = document.getElementById('answer').value
+
+            try{
+                if(answer == '') throw ' empty.'
+                if(isNaN(answer)) throw ' is not a number.'
+                if(answer != 4) throw  ' not correct.'
+                if(answer == 4){
+                    alert(`Answer ${answer} is correct!`)
+                }
+            }
+            catch (err){
+                alert(`Answer ${answer} is ${err}`)
+            }
+        }
+        checkAnswer()
+
+        "/>
+        
+
+    </body>
+</html>

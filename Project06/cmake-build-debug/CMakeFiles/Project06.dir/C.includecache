@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/matthewbass/Documents/School_Colby/Colby/CS333/Project06/C/tasks/src/Linkedlist.h
+stdio.h
+-
+
+/Users/matthewbass/Documents/School_Colby/Colby/CS333/Project06/C/tasks/src/WordCounter.H
+stdio.h
+-
+Linkedlist.h
+/Users/matthewbass/Documents/School_Colby/Colby/CS333/Project06/C/tasks/src/Linkedlist.h
+ctype.h
+-
+
+/Users/matthewbass/Documents/School_Colby/Colby/CS333/Project06/C/tasks/src/WordCounter.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+ctype.h
+-
+Linkedlist.h
+/Users/matthewbass/Documents/School_Colby/Colby/CS333/Project06/C/tasks/src/Linkedlist.h
+WordCounter.H
+/Users/matthewbass/Documents/School_Colby/Colby/CS333/Project06/C/tasks/src/WordCounter.H
+

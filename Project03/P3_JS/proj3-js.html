@@ -1,0 +1,42 @@
+<!---
+-Javascript
+-project 2: Helloworld
+-by Matt Bass
+-Sept 2021
+-This is the html file to run JS on browser-->
+
+<!DOCTYPE HTML>
+<html>
+    <script type="text/javascript" src="binary_searches.js"></script>
+    <body>
+        <p>project3 for JS </p>
+        <!-- function that link to js -->
+
+        <input type="number" id ="arr_size" min ="0" max = "10000">
+
+        <input type="number" id ="target_num" min ="0" max = "10000">
+
+        <input type="button" value="Binary Search Iterative Bitshift"
+               onclick="testBinarySearchIterBitshift(document.getElementById('arr_size').value,
+               document.getElementById('target_num').value)"/>
+
+
+        <input type="button" value="Binary Search Iterative Floor"
+               onclick="testBinarySearchIterFloor(document.getElementById('arr_size').value,
+               document.getElementById('target_num').value)"/>
+
+
+        <input type="button" value="Binary Search Iterative Round"
+               onclick="testBinarySearchIterRound(document.getElementById('arr_size').value,
+               document.getElementById('target_num').value)"/>
+
+
+        <input type="button" value="Binary Search Iterative Ceiling"
+               onclick="testBinarySearchIterCeil(document.getElementById('arr_size').value,
+               document.getElementById('target_num').value)"/>
+
+
+
+
+    </body>
+</html>

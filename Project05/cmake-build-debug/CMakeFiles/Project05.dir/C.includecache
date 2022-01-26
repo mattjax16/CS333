@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/matthewbass/Documents/School_Colby/Colby/CS333/Project05/C/tasks/src/Linkedlist.h
+stdio.h
+-
+
+/Users/matthewbass/Documents/School_Colby/Colby/CS333/Project05/C/tasks/src/clltest.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+Linkedlist.h
+/Users/matthewbass/Documents/School_Colby/Colby/CS333/Project05/C/tasks/src/Linkedlist.h
+
